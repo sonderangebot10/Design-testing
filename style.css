@@ -1,0 +1,124 @@
+body {
+    background-color: black !important;
+}
+
+.white-bg {
+    background-color: white !important;
+}
+
+li {
+    list-style-type: none;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    font-size: 80px;
+    color: white !important;
+    transform: skewY(-20deg);
+
+    -webkit-animation: dip-out 0.6s;
+    -moz-animation: dip-out 0.6s;
+    animation: dip-out 0.6s;
+}
+
+li:hover {
+    -webkit-animation: dip-in 0.8s normal ease-in-out;
+    -moz-animation: dip-in 0.8s normal ease-in-out;
+    animation: dip-in 0.8s normal ease-in-out;
+
+    animation-fill-mode: forwards;  
+    visibility:visible; 
+}
+
+@-webkit-keyframes dip-in {
+    from {
+        font-size: 80px;
+    }
+    
+    to {
+        font-size: 100px;
+    }
+  }
+
+@-webkit-keyframes dip-out {
+    from {
+        font-size: 100px;
+    }
+    
+    to {
+        font-size: 80x;
+    }
+}
+
+.glow {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff;
+    }
+    
+    to {
+      text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff, 0 0 5px #fff, 0 0 6px #fff, 0 0 7px #fff, 0 0 8px #fff;
+    }
+  }
+
+  .unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.float {
+    animation: float 10s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	to {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(600px);
+	}
+	from {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.custom_button_outside {
+    margin-top: 100px;
+    background-image: linear-gradient(#bbb, white);
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+.custom_button_inside {
+    height: 210px;
+    width: 210px;
+    background-image: linear-gradient(white, #bbb);
+    border-radius: 50%;
+
+    margin: auto;
+    margin-top: 20px;
+    line-height: 225px;
+
+    font-family: 'Gayathri', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.164);
+    text-shadow: 1px 1px 1px black;
+}
+
+.custom_button_inside:active {
+    transform: translateY(4px);
+}
